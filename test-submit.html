@@ -11,7 +11,9 @@
 
   <div>testing finder using external submit into iframe for deep link usage</div>
 
-  <form target="finderframe">
+  <form target="finderframe" action="https://www.vtinfo.com/PF/product_finder.asp">
+    <input type="hidden" name="custID" value="VIP" />
+    <input type="hidden" name="doFocus" value="Y" />
     <input type="d" placeholder="address/zip" />
     <input type="submit" value="Submit into IFrame" />
   </form>
