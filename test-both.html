@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />	
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <style>iframe { border: 1px solid gray; margin: 1px; height: 100%; }</style>
+    <style>iframe { border: 1px solid gray; margin: 1px; width: 100%; }</style>
 </head>
 <body>
 <table width="100%">
@@ -18,9 +18,10 @@
     </td>
 </tr>
 </table>
+    <i>Querystring will be passed down into each iframe.</i>
     <script>
         var oldBF = 'https://www.vtinfo.com/PF/product_finder.asp';
-        var newBF = 'https://finder-test.vtinfo.com/finder/web/v2/iframe';
+        var newBF = 'https://finder-dev.vtinfo.com/finder/web/v2/iframe';
         var qs = window.location.search || '?custID=VIP&theme=bs-paper';
         document.getElementById('iframe1').src = oldBF + qs;
         document.getElementById('iframe2').src = newBF + qs;
