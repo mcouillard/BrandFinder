@@ -6,22 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />	
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    <script src="js/iframeResizer-3.6.6.js"></script>
-    <script>
-      var qs = window.location.search || '?custID=VIP&theme=bs-paper;
-      document.getElementById('iframe1').src += qs;
-      document.getElementById('iframe2').src += qs;
-    </script>
 </head>
 <body>
 <table width="100%">
 <tr>
     <td width="50%">
-      <iframe id="iframe1" src="https://www.vtinfo.com/PF/product_finder.asp" width="650" height="400" frameborder="1"></iframe>
+      <iframe id="iframe1" src="#" width="650" height="500" frameborder="1"></iframe>
     </td><td width="50%">
-      <iframe id="iframe2" src="https://finder.vtinfo.com/finder/web/v2/iframe" width="650" height="400" frameborder="1"></iframe>
+      <iframe id="iframe2" src="#" width="650" height="500" frameborder="1"></iframe>
     </td>
 </tr>
 </table>
+    <script>
+        var oldBF = 'https://www.vtinfo.com/PF/product_finder.asp';
+        var newBF = 'https://finder-test.vtinfo.com/finder/web/v2/iframe';
+        var qs = window.location.search || '?custID=VIP&theme=bs-paper';
+        document.getElementById('iframe1').src = oldBF + qs;
+        document.getElementById('iframe2').src = newBF + qs;
+    </script>
 </body>
 </html>
