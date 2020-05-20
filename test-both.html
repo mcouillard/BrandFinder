@@ -12,17 +12,26 @@
 <table width="100%">
 <tr>
     <td width="50%">
-      <iframe id="iframe1" src="#" height="550"></iframe>
+        OLD:<br/>
+        <iframe id="iframe1" src="#" height="550"></iframe>
     </td><td width="50%">
-      <iframe id="iframe2" src="#" height="550"></iframe>
+        NEW:</br>
+        <iframe id="iframe2" src="#" height="550"></iframe>
     </td>
 </tr>
 </table>
     <i>Querystring will be passed down into each iframe.</i>
     <script>
         var oldBF = 'https://www.vtinfo.com/PF/product_finder.asp';
-        var newBF = 'https://finder-dev.vtinfo.com/finder/web/v2/iframe';
+        var newBF = 'https://finder.vtinfo.com/finder/web/v2/iframe';
         var qs = window.location.search || '?custID=VIP&theme=bs-paper';
+        if (qs.indexOf('env=dev') > -1) {
+            oldBF = 'https://vipwebsitetest.vtinfo.com/PF/product_finder.asp';
+            newBF = 'https://finder-dev.vtinfo.com/finder/web/v2/iframe';
+        } else if (qs.indexOf('env=test') > -1) {
+            oldBF = 'https://vipwebsitetest.vtinfo.com/PF/product_finder.asp';
+            newBF = 'https://finder-test.vtinfo.com/finder/web/v2/iframe';
+        }
         document.getElementById('iframe1').src = oldBF + qs;
         document.getElementById('iframe2').src = newBF + qs;
     </script>
