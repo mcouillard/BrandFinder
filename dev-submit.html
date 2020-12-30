@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BrandFinderTest DEV</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+</head>
+<body>
+
+  <div>testing finder using external submit into iframe for deep link usage</div>
+
+  <form target="finderframe" action="https://finder-dev.vtinfo.com/finder/web/v2/iframe" method="POST">
+    <input type="hidden" name="custID" value="VIP" />
+    <input type="hidden" name="a" value="view" /><!-- to submit finder search -->
+    <input type="hidden" name="dbg" value="1" />
+		
+    <input type="text" name="d" placeholder="address/zip" /><!-- 1 or other -->
+    <input type="text" name="z" placeholder="zip" />
+    <input type="text" name="m" placeholder="miles" />
+		
+    <input type="submit" value="Submit into IFrame" />
+  </form>
+
+  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
+	
+</body>
+</html>
