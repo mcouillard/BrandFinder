@@ -6,6 +6,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+		
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-102985-27', {//mikec finder test
+		    'linker': {
+			'domains': ['vtinfo.com', 'finder-dev.vtinfo.com'],
+			'accept_incoming': true //cross-domain measurement
+		    }
+		    //'cookie_flags': 'secure;samesite=none',
+		    //'anonymize_ip': true
+		});
+	</script>
+	<script Xasync src="https://www.googletagmanager.com/gtag/js"></script>
+		
 </head>
 <body>
 
@@ -24,23 +43,6 @@
 
   <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github2" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
 	
-<script>
-    	window.dataLayer = window.dataLayer || [];
-    	function gtag() {
-	        dataLayer.push(arguments);
-    	}
-    	gtag('js', new Date());
-    
-    	gtag('config', 'UA-102985-27', {//mikec finder test
-	    'linker': {
-		'domains': ['vtinfo.com', 'finder-dev.vtinfo.com'],
-		'accept_incoming': true //cross-domain measurement
-	    }
-	    //'cookie_flags': 'secure;samesite=none',
-	    //'anonymize_ip': true
-	});
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js"></script>
 									      
 </body>
 </html>
