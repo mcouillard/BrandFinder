@@ -5,11 +5,11 @@
 	<title>BrandFinderTest DEV</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 </head>
 <body>
 
-  <div>testing finder using external submit into iframe for deep link usage</div>
+  <div>testing finder using external submit into iframe for deep link usage; with GA cross-domain</div>
 
   <form target="finderframe" action="https://finder-dev.vtinfo.com/finder/web/v2/iframe" method="POST">
     <input type="hidden" name="custID" value="VIP" />
@@ -22,7 +22,7 @@
     <input type="submit" value="Submit into IFrame" />
   </form>
 
-  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
+  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github2" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
 	
 <script>
     	window.dataLayer = window.dataLayer || [];
@@ -40,7 +40,7 @@
 	    //'anonymize_ip': true
 	});
 </script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24683454-26"></script>
+<script async src="https://www.googletagmanager.com/gtag/js"></script>
 									      
 </body>
 </html>
