@@ -13,14 +13,11 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-		//gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
 		gtag('config', 'UA-102985-27', {//mikec finder test
 		    'linker': {
-			'domains': ['vtinfo.com', 'finder-dev.vtinfo.com'],
-			'accept_incoming': true //cross-domain measurement
-		    }
-		    'cookie_flags': 'SameSite=None;Secure',
-		    //'anonymize_ip': true
+			'domains': ['vtinfo.com', 'finder-dev.vtinfo.com']
+		    },
+		    'cookie_flags': 'SameSite=None;Secure'
 		});
 	</script>
 	<script Xasync src="https://www.googletagmanager.com/gtag/js"></script>
