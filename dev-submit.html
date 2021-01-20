@@ -14,7 +14,6 @@
   <form target="finderframe" action="https://finder-dev.vtinfo.com/finder/web/v2/iframe" method="POST">
     <input type="hidden" name="custID" value="VIP" />
     <input type="hidden" name="a" value="view" /><!-- to submit finder search -->
-    <input type="hidden" name="dbg" value="1" />
 		
     <input type="text" name="d" placeholder="address/zip" /><!-- 1 or other -->
     <input type="text" name="z" placeholder="zip" />
@@ -23,7 +22,25 @@
     <input type="submit" value="Submit into IFrame" />
   </form>
 
-  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
+  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
 	
+<script>
+    	window.dataLayer = window.dataLayer || [];
+    	function gtag() {
+	        dataLayer.push(arguments);
+    	}
+    	gtag('js', new Date());
+    
+	gtag('config', '24683454-1', {
+	    'linker': {
+		'domains': ['vtinfo.com', 'finder-dev.vtinfo.com'],
+		'accept_incoming': true //cross-domain measurement
+	    }
+	    //'cookie_flags': 'secure;samesite=none',
+	    //'anonymize_ip': true
+	});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-24683454-26"></script>
+									      
 </body>
 </html>
