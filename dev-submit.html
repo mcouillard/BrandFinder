@@ -13,13 +13,13 @@
 			dataLayer.push(arguments);
 		}
 		gtag('js', new Date());
-
+		//gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
 		gtag('config', 'UA-102985-27', {//mikec finder test
 		    'linker': {
 			'domains': ['vtinfo.com', 'finder-dev.vtinfo.com'],
 			'accept_incoming': true //cross-domain measurement
 		    }
-		    //'cookie_flags': 'secure;samesite=none',
+		    'cookie_flags': 'SameSite=None;Secure',
 		    //'anonymize_ip': true
 		});
 	</script>
@@ -41,7 +41,7 @@
     <input type="submit" value="Submit into IFrame" />
   </form>
 
-  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github2" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
+  <iframe allow="geolocation;" name="finderframe" src="https://finder-dev.vtinfo.com/finder/web/v2/iframe?custID=VIP&from=github3" width="650" id="brand-finder" frameborder="1" style="style="overflow:auto; height:996px;"></iframe>
 	
 									      
 </body>
